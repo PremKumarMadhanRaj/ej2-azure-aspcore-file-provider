@@ -671,7 +671,7 @@ namespace Syncfusion.EJ2.FileManager.AzureFileProvider
             entry.IsFile = fileDetails.IsFile;
             entry.Size = fileDetails.Size;
             entry.HasChild = fileDetails.HasChild;
-            entry.FilterPath = targetPath;
+            entry.FilterPath = targetPath.Replace(this.rootPath, "");
             return entry;
         }
 
